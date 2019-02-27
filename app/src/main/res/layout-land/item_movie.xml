@@ -25,6 +25,7 @@
         android:layout_marginTop="0dp"
         android:layout_toEndOf="@+id/ivPoster"
         android:textSize="24sp"
+        android:textColor="@color/colorPrimary"
         tools:text="A star is Born" />
 
     <TextView
@@ -33,6 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvTitle"
         android:layout_toEndOf="@+id/ivPoster"
+        android:textColor="@color/colorPrimary"
         tools:text="This movie is pretty good" />
 
     <TextView
@@ -41,6 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvOverview"
         android:layout_toEndOf="@+id/ivPoster"
+        android:textColor="@color/colorPrimary"
         android:text="TextView"
         android:textSize="18sp" />
 </RelativeLayout>
