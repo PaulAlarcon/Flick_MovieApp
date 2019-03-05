@@ -3,24 +3,36 @@ package com.paul_alarcon.flick.models;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.parceler.Parcel;
 
 import java.util.ArrayList;
 import java.util.List;
 
+
+@Parcel
 public class Movie {
+    int movieId;
     String posterpath;
     String title;
     String overview;
-    String vote;
+    double vote;
     String backdroppath;
+
+
+    //using parceler
+    public Movie(){
+
+    }
+
 
     public Movie(JSONObject jsonObject) throws JSONException {
 
         posterpath = jsonObject.getString("poster_path");
         title= jsonObject.getString("title");
         overview = jsonObject.getString("overview");
-        vote = jsonObject.getString("vote_average");
+        vote = jsonObject.getDouble("vote_average");
         backdroppath = jsonObject.getString("backdrop_path");
+        movieId = jsonObject.getInt("id");
 
     }
 
@@ -36,6 +48,10 @@ public class Movie {
         return movies;
     }
 
+    public int getMovieId() {
+        return movieId;
+    }
+
     public String getPosterpath() {
         return String.format("https://image.tmdb.org/t/p/w342%s", posterpath);
     }
@@ -44,8 +60,8 @@ public class Movie {
         return title;
     }
 
-    public String getVote() {
-        return vote;
+    public float getVote() {
+        return (float) vote;
     }
 
     public String getBackdroppath() {
@@ -53,6 +69,8 @@ public class Movie {
     }
 
     public String getOverview() {
-        return overview;
+        return overview ;
     }
+
+
 }

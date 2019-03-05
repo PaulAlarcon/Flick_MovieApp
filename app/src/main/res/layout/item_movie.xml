@@ -37,13 +37,4 @@
         tools:text="This movie is pretty good"
         android:textColor="@color/colorPrimary"/>
 
-    <TextView
-        android:id="@+id/tvVote"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvOverview"
-        android:layout_toEndOf="@+id/ivPoster"
-        android:text="TextView"
-        android:textSize="18sp"
-        android:textColor="@color/colorPrimary"/>
 </RelativeLayout>
